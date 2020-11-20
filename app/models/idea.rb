@@ -3,5 +3,6 @@ class Idea < ApplicationRecord
   validates :name, presence: true
   validates :name, uniqueness: true
   has_many :comments
+  belongs_to :user
 
 end

@@ -26,7 +26,7 @@ class IdeasController < ApplicationController
   # POST /ideas
   # POST /ideas.json
   def create
-    @idea = Idea.new(idea_params)
+    @idea = current_user.ideas.new(idea_params)
 
     respond_to do |format|
       if @idea.save
@@ -66,7 +66,7 @@ class IdeasController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_idea
-      @idea = Idea.find(params[:id])
+      @idea = current_user.ideas.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
