@@ -66,7 +66,7 @@ class IdeasController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_idea
-      @idea = current_user.ideas.find(params[:id])
+      @idea = Idea.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

@@ -9,6 +9,8 @@ gem 'rails', '~> 5.2.0'
 group :development do
   gem 'sqlite3'
 end
+gem 'simple_form'
+
 group :production do
   gem 'pg'
 end
